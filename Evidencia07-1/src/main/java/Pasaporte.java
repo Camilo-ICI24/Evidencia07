@@ -4,10 +4,10 @@ public class Pasaporte {
 	private int idPasaporte;
 	private String nacionalidad;
 	private int cantidadHojasDisponibles;
-	private String fechaExpiracion;
+	private int fechaExpiracion;
 
 	public Pasaporte(int idPasaporte, String nacionalidad, int cantidadHojasDisponibles,
-					 String fechaExpiracion) {
+					 int fechaExpiracion) {
 	}
 
 	public int getIdPasaporte() {
@@ -46,7 +46,7 @@ public class Pasaporte {
 		this.cantidadHojasDisponibles = cantidadHojasDisponibles;
 	}
 
-	public String getFechaExpiracion() {
+	public int getFechaExpiracion() {
 
 		return this.fechaExpiracion;
 	}
@@ -55,7 +55,7 @@ public class Pasaporte {
 	 * 
 	 * @param fechaExpiracion
 	 */
-	public void setFechaExpiracion(String fechaExpiracion) {
+	public void setFechaExpiracion(int fechaExpiracion) {
 		this.fechaExpiracion = fechaExpiracion;
 	}
 
@@ -64,11 +64,11 @@ public class Pasaporte {
 			return false;
 		}
 
-		if (this.idPasaporte < 2024) {
+		if (this.fechaExpiracion < 2024) {
 			return false;
 		}
 
-		if (this.cantidadHojasDisponibles == 0) {
+		if (this.cantidadHojasDisponibles <= 0) {
 			return false;
 		}
 

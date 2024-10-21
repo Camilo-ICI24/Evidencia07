@@ -25,9 +25,9 @@ public class Principal {
         aeropuerto.agregarPiloto(piloto2);
 
         Pasaporte pasaporte1 = new Pasaporte(442495, "Chile",
-                4, "2027");
+                4, 2027);
         Pasaporte pasaporte2 = new Pasaporte(67890, "Japón",
-                1, "2022");
+                1, 2022);
 
         Pasajero pasajero1 = new Pasajero(pasaporte1);
         Pasajero pasajero2 = new Pasajero(pasaporte2);

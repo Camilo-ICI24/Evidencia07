@@ -14,6 +14,7 @@ public class Vuelo {
 
     public Vuelo(String ciudadPartida, String ciudadDestino, String fechaDeSalida,
 				 String horaSalida, String horaLlegada, Piloto pilotoDesignado) {
+		this.pasajeros = new ArrayList<>();
     }
 
     public String getCiudadPartida() {

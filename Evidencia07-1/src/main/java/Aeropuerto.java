@@ -13,6 +13,7 @@ public class Aeropuerto {
 	public Aeropuerto() {
 		this.AvionesList = new ArrayList<>();
 		this.PilotosList = new ArrayList<>();
+		this.vuelos = new ArrayList<>();
 	}
 
 	public Avion getAviones() {
