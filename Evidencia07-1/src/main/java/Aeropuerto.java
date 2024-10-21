@@ -3,9 +3,17 @@ import java.util.ArrayList;
 
 public class Aeropuerto {
 
+	private final ArrayList<Avion> AvionesList;
+	private final ArrayList<Piloto> PilotosList;
+	private ArrayList<Vuelo> vuelos;
 	ArrayList<Avion> avion;
 	private Avion aviones;
 	private Piloto pilotosDeVuelo;
+
+	public Aeropuerto() {
+		this.AvionesList = new ArrayList<>();
+		this.PilotosList = new ArrayList<>();
+	}
 
 	public Avion getAviones() {
 
@@ -36,7 +44,22 @@ public class Aeropuerto {
 	}
 
 	public void agregarAvion(Avion avion) {
-		this.aviones.add(avion);
+		this.AvionesList.add(avion);
 	}
 
+	public void agregarPiloto(Piloto piloto) {
+		this.PilotosList.add(piloto);
+	}
+
+	public List<Vuelo> buscarVuelosPorFecha(String fechaDeInteres) {
+		List<Vuelo> vuelosCoincidentes = new ArrayList<>();
+
+		for (Vuelo vuelo : vuelos) {
+			if (vuelo.getFechaDeSalida().equals(fechaDeInteres)) {
+				vuelosCoincidentes.add(vuelo);
+			}
+		}
+
+		return vuelosCoincidentes;
+	}
 }

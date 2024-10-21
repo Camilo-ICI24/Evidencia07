@@ -5,7 +5,11 @@ public class Pasajero {
 	Collection<Pasaporte> pasaporte;
 	private Pasaporte pasaportePasajero;
 
-	public Pasaporte getPasaportePasajero() {
+    public Pasajero(Pasaporte pasaporte) {
+    }
+
+    public Pasaporte getPasaportePasajero() {
+
 		return this.pasaportePasajero;
 	}
 
@@ -14,7 +18,7 @@ public class Pasajero {
 	 * @param pasaportePasajero
 	 */
 	public void setPasaportePasajero(Pasaporte pasaportePasajero) {
+
 		this.pasaportePasajero = pasaportePasajero;
 	}
-
 }

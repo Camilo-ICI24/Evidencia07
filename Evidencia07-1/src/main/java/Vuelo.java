@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Vuelo {
 
-	Collection<Pasajero> pasajeros;
+	ArrayList<Pasajero> pasajeros;
 	Piloto piloto;
 	Collection<Avion> avion;
 	private String ciudadPartida;
@@ -17,38 +17,31 @@ public class Vuelo {
     }
 
     public String getCiudadPartida() {
+
 		return this.ciudadPartida;
 	}
-
-	/**
-	 * 
-	 * @param ciudadPartida
-	 */
 	public void setCiudadPartida(String ciudadPartida) {
+
 		this.ciudadPartida = ciudadPartida;
 	}
 
 	public String getCiudadDestino() {
+
 		return this.ciudadDestino;
 	}
 
-	/**
-	 * 
-	 * @param ciudadDestino
-	 */
 	public void setCiudadDestino(String ciudadDestino) {
+
 		this.ciudadDestino = ciudadDestino;
 	}
 
 	public String getFechaDeSalida() {
+
 		return this.fechaDeSalida;
 	}
 
-	/**
-	 * 
-	 * @param fechaDeSalida
-	 */
 	public void setFechaDeSalida(String fechaDeSalida) {
+
 		this.fechaDeSalida = fechaDeSalida;
 	}
 
@@ -56,41 +49,23 @@ public class Vuelo {
 		return this.horaSalida;
 	}
 
-	/**
-	 * 
-	 * @param horaSalida
-	 */
 	public void setHoraSalida(String horaSalida) {
 		this.horaSalida = horaSalida;
 	}
 
 	public String getHoraLlegada() {
+
 		return this.horaLlegada;
 	}
 
-	/**
-	 * 
-	 * @param horaLlegada
-	 */
 	public void setHoraLlegada(String horaLlegada) {
+
 		this.horaLlegada = horaLlegada;
 	}
 
-	public void getAttribute() {
-		// TODO - implement Vuelo.getAttribute
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param attribute
-	 */
-	public void setAttribute(int attribute) {
-		// TODO - implement Vuelo.setAttribute
-		throw new UnsupportedOperationException();
-	}
 
 	public Piloto getPilotoDesignado() {
+
 		return this.pilotoDesignado;
 	}
 
@@ -99,7 +74,14 @@ public class Vuelo {
 	 * @param pilotoDesignado
 	 */
 	public void setPilotoDesignado(Piloto pilotoDesignado) {
+
 		this.pilotoDesignado = pilotoDesignado;
 	}
 
+	public void agregarPasajero(Pasajero pasajero) {
+	}
+
+	public ArrayList<Pasajero> getPasajeros() {
+		return this.pasajeros;
+	}
 }

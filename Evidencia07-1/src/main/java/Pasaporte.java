@@ -6,6 +6,10 @@ public class Pasaporte {
 	private int cantidadHojasDisponibles;
 	private String fechaExpiracion;
 
+	public Pasaporte(int idPasaporte, String nacionalidad, int cantidadHojasDisponibles,
+					 String fechaExpiracion) {
+	}
+
 	public int getIdPasaporte() {
 		return this.idPasaporte;
 	}
@@ -43,6 +47,7 @@ public class Pasaporte {
 	}
 
 	public String getFechaExpiracion() {
+
 		return this.fechaExpiracion;
 	}
 
@@ -54,4 +59,19 @@ public class Pasaporte {
 		this.fechaExpiracion = fechaExpiracion;
 	}
 
+	public boolean pasaporteValido() {
+		if (this.idPasaporte <= 0) {
+			return false;
+		}
+
+		if (this.idPasaporte < 2024) {
+			return false;
+		}
+
+		if (this.cantidadHojasDisponibles == 0) {
+			return false;
+		}
+
+		return true;
+	}
 }
